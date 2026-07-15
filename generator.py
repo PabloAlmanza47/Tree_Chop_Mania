@@ -126,7 +126,7 @@ def wolf():
 ''')
     print(f'A wolf has appeared!')
 
-def wolf_success():
+def wolf_success(coins):
     print('''
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣶⣶⣾⣟⣛⣿⡿⢛⡿⡳⢶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⡿⠟⠋⠉⠀⠄⠀⢉⠛⢿⣮⡵⠪⠊⠁⡨⠿⣶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -143,7 +143,7 @@ def wolf_success():
 ⠀⠀⠀⠀⠀⠀⠀⠀⠙⣦⣀⠀⣿⣷⣇⡰⢿⣇⠀⠀⠫⠑⠦⣼⠹⠀⠀⢠⠟⣇⡀⡼⠁⠙⠇⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠾⠁⠉⠁⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠂⠈⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 Wolf has been killed''',end=' ')
-    print(f'& you gained \033[1m5\033[0m coins')
+    print(f'& you gained \033[1m{coins}\033[0m coins')
 
 #Random event
 def log():
@@ -167,8 +167,8 @@ def log():
 ⠀⠀⠀⠀⠀⠈⢿⣭⣉⠛⠛⠛⠛⠁⢀⠀⠛⡿⠿⢷⢷⡷⣀⠀⢀⠀⠀⡀⠀⠀⠀⡙⣿⣿⢿⣿⣿⣿⣿⣄⣀⣠⣴⡿⠁⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠛⠛⠛⠛⠛⠛⠛⠛⠳⠒⠶⠒⠷⠚⠶⠚⠖⠳⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠉⠁⠀⠀⠀⠀⠀⠀
 ''')
-def wolf_fail():
-    print(f'You ran out of time & lost \033[1m10\033[0m coins')    
+def wolf_fail(coins):
+    print(f'You ran out of time & lost \033[1m{coins}\033[0m coins')
 
 
 def clear_screen():

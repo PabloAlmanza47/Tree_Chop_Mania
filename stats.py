@@ -1,12 +1,3 @@
-import time
-import os 
-os.system('cls' if os.name == 'nt' else 'clear')
-
-#vars=
-strength=69
-proficiency=3247
-# luck=0
-
 #Durability display
 durability=[
     '[\033[34m██████████\033[0m]',
@@ -61,6 +52,10 @@ axes={
     'warlord_durability':500
 }
 
+#Axe tiers in progression order, and the coin cost to buy into each tier
+AXE_TIERS=['beginner','woodcutter','lumberjack','berserker','warlord']
+AXE_COSTS={'woodcutter':20,'lumberjack':30,'berserker':40,'warlord':50}
+
 #PLAYER STATS
 player_stats={
     'player_axeHead':'',
@@ -88,7 +83,7 @@ def update_axe(level):
     player_stats['player_axeBody3']=axes.get(f'{level}_body3')
 
 #Stats display ---MAIN FUNCTION
-def stats_display(coins,player_durability,player_name,axe_lvl):
+def stats_display(coins,player_durability,player_name,axe_lvl,strength,proficiency):
     update_axe(axe_lvl)
     stats_text=get_stats_text(player_name)
     print(f'''
@@ -108,17 +103,6 @@ def get_durability_bar(player_durability,axe_lvl):
         player_durability=0
     index = min(10, 10 - int((player_durability / axes.get(f'{axe_lvl}_durability'))*10))
     return (durability[index].ljust(22)+f'{player_durability}/\033[32m'+str(axes.get(f'{axe_lvl}_durability')))
-
-
-
-#DISPLAY
-# while player_durability>=0:
-#     stats_display()
-#     player_durability-=1
-#     time.sleep(0.05) 
-# else:
-#     print('\tDone!')
-
 
 
 
